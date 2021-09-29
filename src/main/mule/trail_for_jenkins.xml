@@ -124,7 +124,8 @@ output application/json
         </error-handler>
     </flow>
     <flow name="get:\run:trail_for_jenkins-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+        <logger level="INFO" doc:name="Logger" doc:id="240f8faa-7747-40c7-821f-3acac499dc85" message="Run flow is started&gt;&gt;&gt;&gt;!"/>
+		<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
@@ -136,7 +137,8 @@ output application/json
         </ee:transform>
     </flow>
     <flow name="get:\test:trail_for_jenkins-config">
-        <ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
+        <logger level="INFO" doc:name="Logger" doc:id="ef7ac31f-8f8d-41f2-a8f1-ab7736aa66ad" message="Test flow is started.....!"/>
+		<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
